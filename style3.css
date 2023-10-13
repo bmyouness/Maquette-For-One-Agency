@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300;400;500&display=swap');
+
+html{
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+p{
+    color: white;
+}
+
+footer {
+    background-color: #35333D;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    padding-top: 41px;
+    padding-left: 8.1vw;
+    padding-right: 8.1vw;
+    margin-bottom: 116px;
+}
+
+
+.links-foot{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8vw;
+    padding-bottom: 41px;
+    border-bottom: 3px solid white;
+}
+
+.links-foot:not(.four){
+    padding-right: 6.6vw;
+}
+
+.contact-me{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 36px;
+    padding-right: 36px;
+    background-color: white;
+    color:#35333D;
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+.contact, .linkedin, .copy{
+    margin-left: 128px;
+}
+
+.adresse p{
+    margin: 0;
+    padding:0;
+    text-align: right;
+    margin-right: 12vw;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+span{
+    color: #0076B2;
+}
+
+.mention p{
+    margin:0;
+    padding:0;
+    text-align: right;
+    margin-right: 12vw;
+}
+
+.linkedin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.linkedin p {
+    padding-left: 19px;
+}
+
+.linkedin img{
+    width:50px;
+    height: 50px;
+}
+
+.copy p{
+    margin:0;
+    padding:0;
+    padding-bottom: 1rem;
+    font-size: 20px;
+}
+
+@media screen and (max-width:690px) {
+    
+    .contact-me{
+        font-size: 16px;
+    }
+
+    ul{
+        display:none;
+    }
+
+    footer{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .contact, .linkedin, .adresse{
+        margin-left: 30px;
+    }
+
+    .adresse{
+        text-align: left;
+        margin-right: 0;
+        font-size: 24px;
+    }
+
+    .mention{
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .copy{
+        margin-left:0;
+        text-align: center;
+        font-size: 15px;
+    }
+
+}

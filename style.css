@@ -1,0 +1,272 @@
+html {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;1,100&display=swap");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+}
+
+header img {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* Menu hamburger */
+
+.navigationcheckbox {
+  display: none;
+}
+
+.navigationBg {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  position: fixed;
+  top: 4.5rem;
+  right: 6.5rem;
+  z-index: 2000;
+  transition: 0.2s linear;
+}
+
+.navigationBtn {
+  height: 3em;
+  width: 3em;
+  position: fixed;
+  top: 4.5rem;
+  right: 6.5rem;
+  border-radius: 50%;
+  z-index: 3000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navigationIcon {
+  position: relative;
+  margin-top: 1.5em;
+  width: 2em;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.navigationIcon::before,
+.navigationIcon::after {
+  width: 2em;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.navigationIcon::before {
+  top: -8px;
+}
+
+.navigationIcon::after {
+  top: 8px;
+}
+
+.nav {
+  float: right;
+  height: 100vh;
+  position: fixed;
+  width: 0;
+  opacity: 0;
+  z-index: 2000;
+  top: 30px;
+}
+
+.nav p {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 88%;
+}
+
+.nav img {
+  position: relative;
+  top: 75%;
+  right: -86%;
+}
+
+.navigationList {
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.link:hover {
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.navigationcheckbox:checked ~ .navigationBg {
+  transform: scale(80);
+  background-color: grey;
+}
+
+.navigationcheckbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+}
+
+.navigationcheckbox:checked + .navigationBtn .navigationIcon {
+  background-color: transparent;
+}
+
+.navigationcheckbox:checked + .navigationBtn .navigationIcon::before {
+  top: 0;
+  transform: rotate(135deg);
+  background-color: #fff;
+}
+
+.navigationcheckbox:checked + .navigationBtn .navigationIcon::after {
+  top: 0;
+  transform: rotate(-135deg);
+  background-color: #fff;
+}
+
+/* Fin */
+
+section {
+  padding-left: 10.62vw;
+  padding-top: 12vw;
+}
+
+section .homepage p {
+  color: #d3d3d3;
+  font-size: 1vw;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+/* Carrousel de mot */
+
+section .homepage .carousel {
+  position: relative;
+  width: 57%;
+  font-size: 4vw;
+}
+
+section .homepage .carousel .title {
+  color: white;
+  font-weight: bold;
+}
+
+section .homepage .carousel .change-hidden {
+  position: relative;
+  top: -3.9vw;
+  left: 20%;
+  text-align: left;
+  height: 4vw;
+  overflow: hidden;
+}
+
+section .homepage .carousel .change-hidden .contenant {
+  position: relative;
+  animation: karousel 8s ease-in-out infinite;
+}
+
+section .homepage .carousel .change-hidden .element {
+  display: block;
+  font-weight: bold;
+  color: #000;
+}
+
+@keyframes karousel {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  20%,
+  40% {
+    transform: translateY(-80px);
+  }
+  40%,
+  60% {
+    transform: translateY(-150px);
+  }
+  80%,
+  100% {
+    transform: translateY(-220px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Fin */
+section .homepage .animation {
+  padding: 50px;
+}
+
+section .homepage a {
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+section .homepage a:hover {
+  color: #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+@media screen and (max-width: 1170px) {
+  /*Carousel de mot */
+
+  /* FIN */
+
+  /*Affichage menu hamburger */
+  .nav img {
+    margin: 0;
+    padding: 0;
+    top: -50px;
+    right: -20px;
+  }
+  .navigationList {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    text-align: center;
+    width: 49%;
+  }
+  .link {
+    font-size: 4.5vw;
+  }
+
+  /* FIN */
+}

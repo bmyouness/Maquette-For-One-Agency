@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300;400;500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Anek Tamil", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+/* *POUR LA DIV LEFT* */
+
+.left {
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.left img {
+  margin: 1.2rem;
+}
+
+/*Bulle de texte */
+
+.left .text {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 5.6rem 3rem 5.6rem;
+  width: 60%;
+  height: 30%;
+  padding: 1.9rem; /*30.4 px*/
+  background-color: #f8f8f9;
+  border-radius: 1.9rem;
+}
+
+.left .text h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  width: 70%;
+}
+
+.left .text p {
+  font-size: 1.2rem;
+  margin-top: -0.35rem;
+}
+
+/* Fin */
+
+/*Bulle en savoir plus + flèche */
+
+.left .read-more {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  background-color: #1b7dc8;
+  width: 30%;
+  height: 5%;
+  padding: 5px 0 5px 37px;
+  border-radius: 1.9rem;
+  margin-left: 20rem;
+}
+
+.left .read-more .arrow {
+  background-color: white;
+  margin: 0.95rem;
+  height: 0.125rem;
+  width: 1.5em;
+  margin-right: 1em;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.left .read-more .arrow::before,
+.left .read-more .arrow::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  height: 0.125rem;
+  width: 1em;
+  right: 0;
+  top: 0;
+}
+
+.left .read-more .arrow::before {
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+}
+
+.left .read-more .arrow::after {
+  transform: rotate(-45deg);
+  transform-origin: right top;
+}
+
+/* Fin */
+
+/* App Store et Google Play */
+
+.left .download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.left .download .google,
+.left .download .apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #e0f5fe;
+}
+
+.left .download .google {
+  margin-right: 50px;
+}
+
+/* Fin */
+
+/* *FIN DE LA DIV LEFT* */
+
+/* *POUR LA DIV RIGHT* */
+
+/* Pour le menu hamburger */
+
+.navigationcheckbox {
+  display: none;
+}
+
+.navigationBg {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  position: fixed;
+  top: 2.2rem;
+  right: 2.2rem;
+  z-index: 2000;
+  transition: 0.2s linear;
+}
+
+.navigationBtn {
+  height: 3em;
+  width: 3em;
+  position: fixed;
+  top: 2.5rem;
+  right: 2.5rem;
+  border-radius: 50%;
+  z-index: 3000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navigationIcon {
+  position: relative;
+  margin-top: 1.5em;
+  width: 2em;
+  height: 0.125rem;
+  background-color: black;
+  border-radius: 1.25rem;
+  display: inline-block;
+}
+
+.navigationIcon::before,
+.navigationIcon::after {
+  width: 2em;
+  height: 0.125rem;
+  background-color: black;
+  border-radius: 1.25rem;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.navigationIcon::before {
+  top: -0.5rem;
+}
+
+.navigationIcon::after {
+  top: 0.5rem;
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  width: 0;
+  opacity: 0;
+  z-index: 2000;
+  top: 30px;
+}
+
+.nav p {
+  color: white;
+  position: relative;
+  font-size: 1.5vw;
+  top: 88%;
+  right: 30%;
+}
+
+.nav img {
+  position: relative;
+  top: 75%;
+  right: -28%;
+}
+
+.navigationList {
+  position: absolute;
+  top: 50%;
+  right: 1.9rem;
+  transform: translate(-50%, -50%);
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 3.5vw;
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 3.125rem;
+}
+
+.link:hover {
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.navigationcheckbox:checked ~ .navigationBg {
+  transform: scale(80);
+  background-color: grey;
+}
+
+.navigationcheckbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+}
+
+.navigationcheckbox:checked + .navigationBtn .navigationIcon {
+  background-color: transparent;
+}
+
+.navigationcheckbox:checked + .navigationBtn .navigationIcon::before {
+  top: 0;
+  transform: rotate(135deg);
+  background-color: #fff;
+}
+
+.navigationcheckbox:checked + .navigationBtn .navigationIcon::after {
+  top: 0;
+  transform: rotate(-135deg);
+  background-color: #fff;
+}
+
+/* Fin */
+
+/* Pour la taille des téléphones et emplacememnt */
+.right {
+  background-color: #f5c2cc;
+  width: 100%;
+  height: 100vh; /* Hauteur basé sur la fenêtre */
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.right .phone {
+  align-self: center;
+}
+
+.right img {
+  flex: wrap;
+  margin-left: 4.375rem;
+  /* width: 9.375rem 150px; */
+  height: auto;
+  max-width: 150px;
+  object-fit: cover; /* Image de la même taille sans être déformé */
+}
+
+.right .phone .samsung {
+  margin: 0;
+  padding: 0;
+  width: 20.625rem;
+  margin-bottom: -2.1875rem;
+}
+
+/* Fin */
+
+/* Bouton scroll */
+
+.right .scroll {
+  align-self: flex-end;
+}
+
+.right .scroll br {
+  text-align: center;
+}
+
+.right .scroll a {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+  font-size: 0.75rem;
+  font-weight: bold;
+  height: 8.125rem;
+  width: 1.875rem;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: white;
+  text-transform: uppercase;
+  color: black;
+}
+
+/* *FIN DE LA DIV RIGHT* */
+
+/* MENU RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left {
+    height: 30%;
+  }
+  .left .logo {
+    display: none;
+  }
+  .left .text {
+    margin: 1rem;
+  }
+
+  .left .read-more {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    right: 10rem;
+    top: 55rem;
+  }
+  .left .read-more .arrow {
+    display: none;
+  }
+  .right {
+    width: -90%;
+  }
+  .right .phone img {
+    margin-left: 5%;
+    width: 30%;
+    object-fit: cover; /* Image de la même taille sans être déformé */
+  }
+  .right .phone .samsung {
+    width: 60%;
+  }
+
+  .right .scroll {
+    display: none;
+  }
+
+  /*Affichage menu hamburger */
+  .nav img {
+    margin: 0;
+    padding: 0;
+    top: -50px;
+    right: -20px;
+  }
+  .nav p {
+    right: -23%;
+  }
+  .navigationList {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    text-align: center;
+    width: 49%;
+  }
+  .link {
+    font-size: 4.5vw;
+  }
+
+  /* FIN */
+}
+
+/* FIN */

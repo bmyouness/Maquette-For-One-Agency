@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300;400;500&display=swap");
+
+html {
+  font-family: "Anek Tamil", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+    120deg,
+    white 45%,
+    #e0f5fe 45%
+  ); /* background: linear-gradient( angle, couleur1 couleur1-arrêt à(%), couleur2 couleur2-début à (%))*/
+}
+
+.two-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #6f6f6f;
+}
+
+span {
+  color: #ff937b;
+}
+
+.left-grid {
+  width: 40%;
+  display: grid;
+  grid-template-areas:
+    "case0 case1 case1 case1"
+    "case2 case3 case4 case4"
+    "case5 case6 case6 case6";
+  /* grid-gap: 10px; */
+}
+
+.left-grid .case0 {
+  background-color: #f8f8f9;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  width: 250px;
+  padding: 15px;
+  grid-area: case0;
+}
+
+.case0 img {
+  object-fit: contain;
+}
+
+.left-grid .case1 {
+  background-color: #f8f8f9;
+  border-radius: 30px;
+  grid-area: case1;
+  width: 280px;
+}
+
+.left-grid .case2 {
+  background-color: #f8f8f9;
+  border-radius: 30px;
+  width: 150px;
+  height: 170px;
+}
+
+.left-grid .case3 {
+  background: rgba(84, 197, 248, 0.18);
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  width: 200px;
+  grid-area: case3;
+}
+
+.left-grid .case4 {
+  background-color: #f8f8f9;
+  border-radius: 30px;
+  grid-area: case4;
+  width: 180px;
+}
+
+.left-grid .case5 {
+  background-color: #f8f8f9;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  width: 280px;
+  grid-area: case5;
+}
+
+.left-grid .case6 {
+  background-color: #f8f8f9;
+  border-radius: 30px;
+  grid-area: case6;
+  width: 280px;
+}
+
+.right {
+  position: relative;
+}
+
+.right .phones {
+  margin-left: 240px;
+  width: 40vw;
+  height: 33vw;
+}
+
+.case3 img,
+.case5 img {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1000px) {
+  /*Affichage menu hamburger */
+  .right .navigation .nav img {
+    margin: 0;
+    padding: 0;
+    top: -10%;
+    right: 100%;
+  }
+  .navigationList {
+    top: 50%;
+    transform: translate(-85%, -50%);
+    list-style-type: none;
+    text-align: center;
+  }
+  .link {
+    font-size: 4.5vw;
+  }
+  .nav p {
+    left: -100%;
+    font-size: 2.5vw;
+  }
+
+  /* FIN */
+  .right .phones {
+    display: none;
+  }
+  .left-grid {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .left-grid {
+    width: 20%;
+  }
+}

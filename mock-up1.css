@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Anek Tamil", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.left {
+  width: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left .bloc1 {
+  margin: 180px 80px 0px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bloc1 .text {
+  padding: 40px;
+  background-color: #f8f8f9;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  max-width: 2000px;
+}
+
+.left .text h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  width: 70%;
+}
+
+.left .text p {
+  margin-top: 20px;
+}
+
+.available {
+  display: none;
+}
+
+.bloc2 .download {
+  display: flex;
+  flex-direction: row;
+}
+
+.bloc2 .download .google,
+.bloc2 .download .apple {
+  margin-left: 20px;
+  width: 120px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #e0f5fe;
+}
+
+.read-more {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  background-color: #1b7dc8;
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
+  max-width: 200px;
+}
+
+.right {
+  width: 50%;
+  background-color: #f5c2cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 136px;
+}
+
+.phone .samsung img {
+  margin-left: 57px;
+}
+
+.flutter {
+  width: 147px;
+  height: 53px;
+  margin-right: 300px;
+}
+
+.flutter img {
+  width: 100%;
+  height: auto;
+}
+
+/*bouton scroll*/
+
+.right .scroll {
+  align-self: flex-end;
+  margin-right: 36px;
+  position: relative;
+  bottom: 70px;
+}
+
+.right .scroll br {
+  text-align: center;
+}
+
+.right .scroll a {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+  font-size: 12px;
+  font-weight: bold;
+  height: 130px;
+  width: 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: white;
+  text-transform: uppercase;
+  color: black;
+}
+/* fin */
+
+@media screen and (max-width: 300px) {
+  .read-more {
+    bottom: -950px;
+    padding: 5px 10px 5px 10px;
+    left: 0;
+  }
+
+  .flutter {
+    margin-right: 150px;
+  }
+}
+
+@media screen and (max-height: 620px) {
+  .left .bloc1 {
+    margin: 30px 80px 0px 80px;
+  }
+
+  .phone {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-height: 620px) and (max-height: 720px) {
+  .left .bloc1 {
+    margin: 150px 80px 0px 80px;
+  }
+
+  .phone {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left .bloc1 {
+    margin: 30px 50px 0px 50px;
+  }
+
+  .available {
+    display: flex;
+  }
+
+  .bloc2 .download {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .read-more {
+    position: relative;
+    bottom: -630px;
+    left: 50px;
+  }
+
+  .right .scroll {
+    display: none;
+  }
+
+  .phone {
+    margin-top: 80px;
+  }
+
+  .flutter {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 863px) {
+  .phone .iphone img {
+    width: 70%;
+  }
+
+  .phone .samsung img {
+    margin-left: 0px;
+    width: 70%;
+  }
+
+  .left .bloc1 {
+    margin: 200px 32px 0px 32px;
+  }
+}
+
+@media screen and (max-width: 1027px) {
+  .right .scroll {
+    margin-right: 15px;
+  }
+
+  .flutter {
+    margin-right: 200px;
+  }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 8000px) {
+  .left .bloc1 {
+    margin: 350px 80px 0px 80px;
+  }
+
+  .phone .iphone img {
+    width: 10vw;
+  }
+
+  .phone .samsung img {
+    width: 11vw;
+  }
+}
+
+@media screen and (min-width: 2000px) and (min-height: 2000px) and (max-width: 8000px) and (max-height: 8000px) {
+  .bloc1 .text {
+    font-size: 60px;
+  }
+
+  .read-more {
+    font-size: 60px;
+  }
+
+  .right .scroll {
+    bottom: -250px;
+  }
+
+  .right .scroll a {
+    font-size: 50px;
+    height: 550px;
+    width: 100px;
+  }
+}

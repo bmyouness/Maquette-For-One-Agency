@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300;400;500&display=swap");
+
+html {
+  font-family: "Anek Tamil", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.left {
+  width: 100%;
+}
+
+.left p {
+  font-size: 2vw;
+  width: 70%;
+  margin-left: 6rem;
+}
+
+.left .bull-one {
+  padding: 0.5rem;
+  background-color: #f8f8f9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  margin-left: 6rem;
+}
+
+.left .bull-one img {
+  margin-left: 1vw;
+  width: 61px;
+  height: 61px;
+}
+
+.left .bull-one p {
+  font-size: 1.4vw;
+  text-align: center;
+  margin-left: 2rem;
+}
+
+.left .bull-two {
+  margin: 4.8rem;
+  margin-left: 8vw;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f8f8f9;
+  border-radius: 20px;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .bull-two a {
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 20px;
+  color: white;
+  background-color: #1b7dc8;
+  margin-top: 2rem;
+}
+
+.right {
+  background-color: #1b7dc8;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right .data {
+  padding: 4.5vw;
+  background-color: white;
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right .data .text {
+  display: flex;
+  flex-direction: row;
+}
+
+.right .data .text p {
+  margin-left: 1vw;
+}
+
+.right .data .text img {
+  width: 61px;
+  height: 61px;
+  padding-top: 1vw;
+}
+
+form {
+  margin-top: 1vw;
+}
+
+/*formulaire*/
+
+fieldset {
+  width: 20vw;
+  border: 1px solid #566c96;
+  border-radius: 20px;
+}
+
+legend {
+  font-size: 1vw;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 23vw;
+  height: 2vw;
+  border: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 20vw;
+  height: 3.5vw;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  color: white;
+  font-size: 1.5vw;
+  background-color: #ff937b;
+  padding: 0.658vw;
+  border: none;
+  border-radius: 10px;
+}
+/* Fin */
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column-reverse;
+  }
+
+  .right {
+    height: 80vh;
+  }
+
+  .left {
+    height: 20vh;
+  }
+  .right .data {
+    height: 80%;
+    padding: 1vw;
+  }
+
+  .right .data .text .img {
+    height: 10px;
+    width: 10px;
+  }
+
+  .left img,
+  .left p,
+  .bull-one {
+    display: none;
+    visibility: hidden;
+  }
+
+  .left .bull-two {
+    margin: 0;
+  }
+}
